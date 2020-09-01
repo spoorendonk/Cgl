@@ -19,4 +19,4 @@ install:
 build_script:
   - C:\msys64\usr\bin\bash -lc "cd C:\projects; ln -s %APPVEYOR_PROJECT_SLUG% %APPVEYOR_PROJECT_NAME%; git clone https://github.com/coin-or/coinbrew"
   - C:\msys64\usr\bin\bash -lc "cd C:\projects; ./coinbrew/coinbrew fetch https://github.com/%APPVEYOR_REPO_NAME%@%APPVEYOR_REPO_BRANCH% --no-prompt --no-third-party --skip-update"
-  - C:\msys64\usr\bin\bash -lc "cd C:\projects; export PATH=$ADD_PATH:$PATH; ./coinbrew/coinbrew build Cbc --no-prompt --no-third-party --build=x86_64-w64-mingw32 --enable-static --disable-shared --enable-msvc --enable-debug --verbosity 4 --tests none --enable-relocatable --with-pic --parallel-jobs=4"
+  - C:\msys64\usr\bin\bash -lc "cd C:\projects; export PATH=$ADD_PATH:$PATH; ./coinbrew/coinbrew build Cgl --no-prompt --no-third-party --build=x86_64-w64-mingw32 --enable-static --disable-shared --enable-msvc --enable-debug --verbosity 4 --tests none --enable-relocatable --with-pic --parallel-jobs=4"
